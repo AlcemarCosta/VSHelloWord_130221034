@@ -14,7 +14,16 @@ namespace VSHelloWord_130221034
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+           //Comentário de Teste
+           var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .UseApplicationInsights()
+                .Build();
+
+            host.Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
