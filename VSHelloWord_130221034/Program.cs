@@ -15,6 +15,7 @@ namespace VSHelloWord_130221034
         public static void Main(string[] args)
         {
            //Comentário de Teste
+           //Nova linea
            var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
